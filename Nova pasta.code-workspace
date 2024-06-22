@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"mysqlOptions": {
+			"authProtocol": "default",
+			"enableSsl": "Disabled"
+		},
+		"previewLimit": 50,
+		"server": "localhost",
+		"port": 3306,
+		"driver": "MySQL",
+		"name": "site_conexao",
+		"database": "bd_site",
+		"username": "localHost"
+	}
+}

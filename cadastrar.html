@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Always Learning Cadastro</title>
+    <meta name="description" content="Explore o mundo do conhecimento, sempre aprendendo mais">
+    <link rel="stylesheet" type="text/css" href="cadastrar.style.css">
+    <link rel="stylesheet" type="script/js" href="index2.html">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">Always Learning</div>
+</header>
+
+<nav class="menu">
+    <a href="always_Learning.html" class="menu-item">Home</a>
+    <a href="#" class="menu-item">About us</a>
+    <a href="#" class="menu-item">Curses</a>
+    <div class="indicador"></div>
+    <div class="btn"></div>
+    <button id="login-btn" class="Flogin">more</button>
+    <button id="cadastrar-btn" class="Fcadastrar">Cadastrar</button>
+</nav>
+
+<div class="tela-login">
+    <h1>Cadastre-se</h1>
+    <form action="conexao_bd.js" method="POST">
+    <input type="text" id="email" placeholder="Email">
+    <br><br>
+    <input type="text" id="cpf" placeholder="CPF">
+    <br><br>
+    <input type="text" id="nome" placeholder="Nome">
+    <br><br>
+    <input type="password" id="senha" placeholder="Senha">
+    <br><br>
+    <button type="submit" id="cadastrar-button" class="entrar">Cadastrar</button>
+</div>
+
+<footer>
+    <div class="itensF">
+        <span>saiba mais</span>
+        <span>Descubra outros cursos</span>
+        <span>Inclusão Digital</span>
+    </div>
+</footer>
+
+<script>
+document.getElementById('cadastroForm').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Evita o envio padrão do formulário
+
+    const email = document.getElementById('email').value;
+    const cpf = document.getElementById('cpf').value;
+    const nome = document.getElementById('nome').value;
+    const senha = document.getElementById('senha').value;
+
+    // Chama a função para cadastrar o usuário
+    await cadastrarUsuario(email, cpf, nome, senha);
+});
+
+async function cadastrarUsuario(email, cpf, nome, senha) {
+    const url = '/index2.html'; // Endpoint da sua API para cadastrar usuário
+    const data = { email, cpf, nome, senha };
+
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+            alert('Usuário cadastrado com sucesso!');
+            console.log('Novo usuário cadastrado:', data);
+            window.location.href = '/index2.html';
+        } else {
+            const errorMessage = await response.text();
+            alert('Erro ao cadastrar usuário: ' + errorMessage);
+        }
+    } catch (error) {
+        console.error('Erro ao cadastrar usuário:', error);
+        alert('Erro ao cadastrar usuário. Por favor, tente novamente.');
+    }
+}
+</script>
+
+</body>
+</html>

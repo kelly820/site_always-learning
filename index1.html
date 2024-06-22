@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Always Learning</title>
+    <meta name="description" content="Explore o mundo do conhecimento, sempre aprendendo mais">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Adicionando um link para o Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    
+    <!-- Estilos CSS para o carrossel -->
+    <style>
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px 20px;
+}
+
+.menu:hover {
+    background-color: rgba(0, 0, 0, 0.922);
+    transition: background 1s;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.menu-item:hover {
+    color: #fff; /* Mantém a cor do texto branca ao passar o mouse */
+}
+
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 300px; /* Altura ajustável conforme necessário */
+            margin-bottom: 20px;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            flex: 0 0 100%; /* Cada item do carrossel ocupa 100% da largura visível */
+            min-width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .carousel-item img {
+            width: 320px;
+            height: 300px;
+            object-fit: cover; /* Garante que a imagem cubra completamente o espaço */
+        }
+
+        #prevBtn, #nextBtn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            background-color:#6a61e7;
+            z-index: 1;
+        }
+
+        #prevBtn {
+            left: 10px;
+        }
+
+        #nextBtn {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+        <nav class="menu">
+        <div class="logo">Always Learning</div>
+        <a href="https://aprendamais.mec.gov.br/course/index.php?categoryid=7" class="menu-item">Idiomas</a>
+        <a href="https://aprendamais.mec.gov.br/course/index.php?lang=pt_br" class="menu-item">Concursos</a>
+        <a href="https://kultivi.com/cursos/enem" class="menu-item">Enem</a>
+        <a href="https://aprendamais.mec.gov.br/course/index.php?categoryid=8" class="menu-item">Techs</a>
+        <button id="login-btn" class="Flogin">  more</button>
+        <button id="cadastrar-btn" class="Fcadastrar">Cadastrar</button>
+    </nav>
+</header>
+
+    <main>
+        <h1 id="titulo-principal">Alcance seu futuro, conquistando-o no presente</h1>
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="carousel-item">
+                            <img src=".anima/anti - heroes in love.jpeg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src=".anima/baixados (22).jpeg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src=".anima/baixados (21).jpeg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src=".anima/baixados (20).jpeg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src=".anima/baixados (15).jpeg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src=".anima/baixados (14).jpeg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src=".anima/garrison abbey _ bad reputation by kbr _ aesthetic.jpeg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src=".anima/baixados (19).jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <button id="prevBtn">Anterior</button>
+                <button id="nextBtn">Próxima</button>
+            </div>
+
+                    <br>
+                    <h2>Explorando as Fronteiras do Saber</h2>
+                    <br>
+                    <blockquote>O conhecimento é a bússola que guia a humanidade através das eras, uma jornada contínua de descoberta, compreensão e aplicação. Desde os primórdios da civilização, a busca pelo conhecimento tem sido o catalisador de progresso, transformando sociedades e moldando o nosso entendimento do mundo e de nós mesmos.
+
+A filosofia, por sua vez, é a contemplação crítica e profunda sobre o conhecimento em si. É o questionamento das suposições fundamentais, a análise das estruturas do pensamento e a exploração das questões mais profundas da existência humana. Na interseção entre conhecimento e filosofia, surgem as grandes questões sobre o sentido da vida, a natureza da realidade, a ética e a moralidade, entre tantos outros temas que desafiam nossa compreensão.
+
+O conhecimento abrange tanto a ciência empírica, com suas observações rigorosas e experimentos controlados, quanto a sabedoria acumulada ao longo dos séculos por meio das artes, da literatura e das tradições culturais. É um vasto oceano de informações, teorias e experiências que nos permite navegar por um mundo em constante mudança.
+
+A filosofia, por sua vez, nos convida a questionar e a refletir sobre os limites do conhecimento. Ela nos ensina a importância da análise crítica, do pensamento lógico e da argumentação fundamentada. Por meio da filosofia, exploramos diferentes perspectivas e construímos pontes entre disciplinas aparentemente divergentes, enriquecendo nossa compreensão global.
+
+Assim, conhecimento e filosofia não são apenas áreas de estudo acadêmico, mas sim ferramentas essenciais para o crescimento pessoal e coletivo. Elas nos capacitam a enfrentar desafios complexos, a tomar decisões informadas e a contribuir de maneira significativa para o bem-estar da sociedade.
+
+Em última análise, o conhecimento e a filosofia são pilares que sustentam nossa busca por verdade, significado e progresso. São fontes inesgotáveis de inspiração e sabedoria, alimentando o desejo humano intrínseco de compreender o mundo e o universo que habitamos.</blockquote>
+
+
+
+
+                </div>
+            </div>
+        <h3>Principais faculdades mais requisitadas</h3>
+<main>
+    <div class="wrapper">
+        <figure><img src=".anima/Faculdade de Medicina UFMG.jpeg" alt="Image 1"></figure>
+        <figure><img src=".anima/Circulando por Curitiba.jpeg" alt="Image 2"></figure>
+        <figure><img src=".anima/Medicina da Unesp de Botucatu registra 266,2 candidatos por vaga _ Jornal Acontece Botucatu.jpeg" alt="Image 3"></figure>
+        <figure><img src=".anima/Faculdade de Direito - USP.jpeg" alt="Image 4"></figure>
+        <figure><img src=".anima/Unicamp divulga lista de aprovados no vestibular 2022 _ Guia do Estudante.jpeg" alt="Image 4"></figure>
+    
+    
+    </div>
+</main>
+
+    <footer>
+        <div class="footer-items">
+            <span>saiba mais</span>
+            <span>Descubra outros cursos</span> 
+            <span>Inclusão Digital</span>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript para o carrossel -->
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const items = Array.from(document.querySelectorAll('.carousel-item'));
+
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        let currentIndex = 0;
+        const itemWidth = items[0].getBoundingClientRect().width;
+
+        function updateTrack() {
+            track.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex++;
+            if (currentIndex > items.length - 1) {
+                currentIndex = 0;
+            }
+            updateTrack();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = items.length - 1;
+            }
+            updateTrack();
+        });
+
+
+
+
+    //terminar a page e fazer ajustes no back-end
+    </script>
+</body>
+</html>

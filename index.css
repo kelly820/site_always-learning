@@ -1,0 +1,291 @@
+/*parte dois tela login*/
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Dancing Script','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+
+}
+
+
+
+
+
+
+
+body {
+    font-family: 'Dancing Script';
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Estilos do Header */
+header {
+    background-color: #000000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px 20px;
+}
+
+.menu:hover {
+    background-color: rgba(0, 0, 0, 0.922);
+    transition: background 1s;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.menu-item:hover {
+    color: #fff; /* Mantém a cor do texto branca ao passar o mouse */
+}
+
+.Flogin, .Fcadastrar {
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: 4px #ffffff;
+    background-color: #000000;
+    color: #fff;
+    font-size: 18px;
+    border-bottom: 2px;
+    border-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    margin-right: 10px; /* Adiciona margem à direita para separar o botão de login do botão de cadastrar */
+    
+    
+    
+}
+.Flogin:hover, .Fcadastrar:hover {
+    background-color: #ffffff;
+}
+
+/* Estilos do Main */
+main {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 300px; /* Altura ajustável conforme necessário */
+    margin-bottom: 20px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    flex: 0 0 100%; /* Cada item do carrossel ocupa 100% da largura visível */
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+}
+
+.carousel-item img {
+    width: 320px;
+    height: 300px;
+    border-radius: 18px;
+    object-fit: cover; /* Garante que a imagem cubra completamente o espaço */
+}
+
+#prevBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #5734b7;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 18px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+    
+}
+
+#titulo-principal {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 36px;
+    font-style: oblique;
+    text-align: center;
+    top: -10px;
+    margin-top: -20px;
+    color: #ffffff;
+}
+h2 {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333; /* Cor do título */
+    top: 30px;
+}
+
+blockquote {
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: normal;
+    color: #393333; /* Cor do texto do bloco de citação */
+    border-left: 5px solid #ccc; /* Estilo da borda esquerda */
+    padding-left: 20px; /* Espaçamento interno à esquerda */
+    padding-left: 20px; /* Espaçamento interno à esquerda */
+    margin-top: 30px; /* Descer o bloco de citação em 30px */
+    top: 20px;
+}
+
+
+/* Estilos dos Vídeos */
+
+/* Estilos do Footer */
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-items {
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: space-around;
+    font-size: 14px;
+}
+
+.footer-items span {
+    margin: 0 10px;
+}
+.carousel-item img {
+    width: 320px;
+    height: 300px;
+    object-fit: cover; /* Garante que a imagem cubra completamente o espaço */
+}
+
+
+
+main {
+    padding: 80px 20px;
+    text-align: center;
+    top: 400px; /* Ajuste este valor conforme necessário */
+    
+}
+
+    h3 {
+        font-family: 'cursive';
+        font-size: 36px;
+        margin-top: 60px; /* Ajuste conforme necessário */
+        margin-bottom: 20px; /* Ajuste conforme necessário */
+    }
+    
+.wrapper {
+    font-family: 'cursive';
+    font-size: 36px;
+    margin-top: 40px; /* Ajuste conforme necessário */
+    margin-bottom: 20px; /* Ajuste conforme necessário */
+    }
+
+
+
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.wrapper figure {
+    margin: 0;
+}
+
+.wrapper img {
+    width: 220px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.wrapper img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos do Footer */
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-items {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+}
+
+.footer-items span {
+    margin: 0 10px;
+}
+
+
+
+
+
+
+
+@keyframes colorChange {
+    0% { border-color: rgb(0, 255, 238); }
+    25% { border-color: rgb(0, 8, 255); }
+    50% { border-color: rgb(255, 0, 166); }
+    75% { border-color: rgb(255, 25, 25); }
+    100% { border-color: rgb(2, 255, 99); }
+}

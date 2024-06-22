@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Always Learning Page</title>
+    <meta name="description" content="Explore o mundo do conhecimento, sempre aprendendo mais">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="script/py" href="bd.py">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- Incluindo o jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Mostrar tela de login ao clicar no botão "Login"
+            $(".Flogin").click(function() {
+                $(".tela-login").show();
+            });
+
+            // Mostrar tela de cadastro ao clicar no botão "Cadastrar"
+            $(".Fcadastrar").click(function() {
+                $(".tela-cadastro").show();
+            });
+
+            // Esconder tela de login/cadastro ao clicar no botão "Fechar"
+            $(".fechar").click(function() {
+                $(".tela-login, .tela-cadastro").hide();
+            });
+
+            // Redirecionar para outras páginas ao clicar nos links de navegação
+            $(".menu-item").click(function(e) {
+                e.preventDefault(); // Prevenir o comportamento padrão do link
+                var page = $(this).attr("href");
+                window.location.href = 'index2.html'; // Redirecionar para a página correspondente
+            });
+    
+            $(document).ready(function() {
+            // Evento de clique no botão "Entrar"
+            $('#btnEntrar').click(function(){
+                // Redirecionar para outra página HTML
+                window.location.href = 'index2.html';
+            });
+        
+});
+            // Animação da barra de navegação
+            $(".menu").hover(
+                function() {
+                    // Mouse em cima da barra de navegação
+                    $(".indicador").stop().animate({ left: $(this).position().left, width: $(this).width() }, 300);
+                },
+                function() {
+                    // Mouse fora da barra de navegação
+                    $(".indicador").stop().animate({ left: $(".menu-item.active").position().left, width: $(".menu-item.active").width() }, 300);
+                }
+            );
+
+            // Autocompletar dados do usuário
+            var dadosUsuario = {
+                email: "usuario@email.com",
+                cpf: "12345678900",
+                nome: "Nome Sobrenome",
+                senha: "senha123"
+            };
+
+            $("#email-login").val(dadosUsuario.email);
+            $("#cpf-cadastro").val(dadosUsuario.cpf);
+            $("#nome-cadastro").val(dadosUsuario.nome);
+            $("#email-cadastro").val(dadosUsuario.email);
+            $("#senha-cadastro").val(dadosUsuario.senha);
+        });
+    </script>
+</head>
+<body>
+    <!-- Seu HTML continua aqui -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Redirecionar para a página de login ao clicar no botão "Login"
+            $("#login-btn").click(function() {
+                window.location.href = "index1.html";
+            });
+
+            // Redirecionar para a página de cadastro ao clicar no botão "Cadastrar"
+            $("#cadastrar-btn").click(function() {
+                window.location.href = "cadastrar.html";
+            });
+        });
+    </script>
+</body>
+
+</head>
+<body>
+
+ 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+        })
+    });
+    $(document).ready(function(){
+    // Evento de clique no botão "Entrar"
+    $('#btnLogin').click(function(){
+        // Aqui você pode salvar os dados do usuário, por exemplo, em localStorage
+        // Supondo que você tenha um formulário de login com campos de email e senha
+        
+        // Redirecionar para outra página HTML
+        window.location.href = 'index2.html';
+    });
+});
+</script>
+
+<body>
+    <header>
+        <div class="logo">Always Learning</div>
+        <nav class="navbar">
+            <a href="always_Learning.html" class="menu-item">Home</a>
+            <a href="index1.html" class="menu-item">About us</a>
+            <a href="https://kultivi.com/" class="menu-item">Courses</a>
+            <button id="login-btn" class="Flogin">more</button>
+            <button id="cadastrar-btn" class="Fcadastrar">Register</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <figure><img src=".anima/baixados (6).jpeg" alt="Image 1"></figure>
+            <figure><img src=".anima/Night Manhattan.jpeg" alt="Image 2"></figure>
+            <figure><img src=".anima/fond d'écran de téléphone _ Pinterest _ Black phone wallpaper, Dark phone wallpapers, Cute black wallpaper.jpeg" alt="Image 3"></figure>
+            <figure><img src=".anima/ceebuthaten.jpeg" alt="Image 4"></figure>
+        </div>
+        <a class="buttonS" href="https://kultivi.com/">Know more</a>
+        <div class="landing-text">
+                <h1>Always Learning</h1>
+                <p>Explore o mundo do conhecimento, sempre aprendendo mais.</p>
+            </div>
+        <div class="image2">
+        <figure><img src=".anima/baixados (7).jpeg" alt="Image 5"></figure>
+        </div>
+        <div class="quote-container">
+            <h2>Frase Inspiradora</h2>
+            <blockquote>
+                "A diversidade de ideias não é apenas salutar, mas indispensável para a sobrevivência de uma sociedade civilizada."<br>
+                <cite>Carl Sagan</cite>
+            </blockquote>
+            <blockquote>
+                "Pequenas mudanças em pequenas coisas levam a grandes mudanças em grandes coisas."<br>
+                <cite>Carl Sagan</cite>
+            </blockquote>
+            </main>
+    <footer>
+        <div class="footer-items">
+            <span>Learn More</span>
+            <span>Discover Other Courses</span>
+            <span>Digital Inclusion</span>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+<script>const loginButton = document.getElementById('more');
+
+loginButton.addEventListener('click', () => {
+  // Verifique se o usuário está autenticado (por exemplo, usando um token JWT)
+  const isAuthenticated = checkAuthentication(); // Implemente essa função
+
+if (isAuthenticated) {
+    window.location.href = 'cadastrar.html';
+} else {
+    window.location.href = 'index1.html';
+}
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</html>

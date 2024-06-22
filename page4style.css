@@ -1,0 +1,286 @@
+/* Estilos Globais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilos do Menu */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #ffffff;
+    padding: 10px 20px;
+}.menu:hover{
+    background-color:rgba(0, 0, 0, 0.922) ; 
+    transition: 1s  background;
+}
+.Flogin{
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: 4px #ffffff;
+    background-color: #000000;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    margin-right: 10px; /* Adiciona margem à direita para separar o botão de login do botão de cadastrar */
+    
+    
+    
+}
+
+.Flogin:hover {
+    background-color: #ffffff;
+}
+.Fcadastrar{
+
+        margin-left: 10px; /* Adiciona margem à esquerda para separar o botão de cadastrar do botão de login */
+        padding: 15px 30px;
+        border-radius: 8px;
+        border: none;
+        background-color: #6a61e7;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-decoration: none;
+    }
+
+    .Fcadastrar:hover {
+        background-color: #8a7fd2;
+    }
+                            
+
+.menu .logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+}
+
+.menu .menu-item {
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+/* Estilos do Conteúdo Principal */
+main {
+    padding: 50px;
+    text-align: center;
+}
+
+.landing-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.landing-text {
+    flex: 1;
+    text-align: left;
+    color: #fff;
+}
+
+.landing-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.landing-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+.landing-image{
+    height: 700px;
+    width: auto; /* Alterado de 220px para auto para permitir que o wrapper se expanda horizontalmente */
+    border-radius: 1rem;
+    border: 4px solid #000000;
+    gap: 10px;
+    display: flex;
+    flex-wrap: nowrap; /* Alterado de wrap para nowrap para manter todos os itens em uma única linha */
+    float: center;
+}
+
+.landing-image{
+    height: 600px;
+    width: 400px;
+
+    border-radius: 1rem;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin-top:10% ;
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition:all .4s cubic-bezier(.25, .4, .45, .1.4);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.landing-image:hover{
+    transform: scale(1.3);
+    filter: grayscale(0%);
+    flex: 3;
+    display:flex;
+}
+
+/*descubra mais plataformas de estudos gratuitas*/
+
+
+h4{
+    color: #6a6a6a98;
+    font-size: 20px;
+    font-style:normal;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: left;
+    top: -20px;
+    margin-top: 10%;
+
+
+
+
+}
+
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 300px; /* Altura ajustável conforme necessário */
+    margin-bottom: 20px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    background-color: #000000; /* Fundo preto */
+    border-radius: 12px;
+    overflow: hidden;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; /* Texto branco */
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    animation: slideIn 0.5s ease-out, colorChange 2s linear infinite;
+    border: 2px solid transparent; /* Adicionei uma borda inicialmente transparente */
+}
+
+@keyframes colorChange {
+    0% { border-color: rgb(0, 255, 238); }
+    25% { border-color: rgb(0, 8, 255); }
+    50% { border-color: rgb(255, 0, 166); }
+    75% { border-color: rgb(128, 0, 107); }
+    100% { border-color: rgb(255, 0, 247); }
+}
+
+.carousel-item:hover {
+    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+    border-color: transparent; /* Removi a animação de mudança de cor ao passar o mouse */
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card .btn {
+    display: inline-block;
+    background-color: #5430a2; /* Fundo branco */
+    color: #dbdbdb; /* Roxo escuro para o texto */
+    padding: 10px 20px;
+    border-radius: 30px; /* Borda mais arredondada */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card .btn:hover {
+    background-color: #4d367d; /* Roxo escuro ao passar o mouse */
+    color: #ffffff; /* Texto branco ao passar o mouse */
+}
+button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #525050cc;
+}
+
+
+
+
+
+.quote-container {
+    margin-top: 50px;
+    color: #fff;
+}
+
+.quote-container blockquote {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.quote-container blockquote cite {
+    display: block;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Estilos do Rodapé */
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.footer-items span {
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+
+
+
+
+
+
+
+

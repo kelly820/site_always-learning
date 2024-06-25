@@ -6,7 +6,6 @@
     <title>Always Learning Cadastro</title>
     <meta name="description" content="Explore o mundo do conhecimento, sempre aprendendo mais">
     <link rel="stylesheet" type="text/css" href="cadastrar.style.css">
-    <link rel="stylesheet" type="templete.html" href="index2.html">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -27,7 +26,7 @@
 
 <div class="tela-login">
     <h1>Cadastre-se</h1>
-    <form action="conexao_bd.js" method="POST">
+   <form id="cadastroForm">
     <input type="text" id="email" placeholder="Email">
     <br><br>
     <input type="text" id="cpf" placeholder="CPF">
@@ -37,8 +36,8 @@
     <input type="password" id="senha" placeholder="Senha">
     <br><br>
     <button type="submit" id="cadastrar-button" class="entrar">Cadastrar</button>
+</form>
 </div>
-
 <footer>
     <div class="itensF">
         <span>saiba mais</span>
@@ -76,7 +75,7 @@ async function cadastrarUsuario(email, cpf, nome, senha) {
         if (response.ok) {
             alert('Usuário cadastrado com sucesso!');
             console.log('Novo usuário cadastrado:', data);
-            window.location.href = '/index2.html';
+            window.location.href = '/index2.html'; // Redireciona após o cadastro
         } else {
             const errorMessage = await response.text();
             alert('Erro ao cadastrar usuário: ' + errorMessage);

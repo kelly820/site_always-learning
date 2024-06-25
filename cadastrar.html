@@ -52,17 +52,9 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
     event.preventDefault(); // Evita o envio padrão do formulário
 
     const email = document.getElementById('email').value;
-    const cpf = document.getElementById('cpf').value;
-    const nome = document.getElementById('nome').value;
     const senha = document.getElementById('senha').value;
-
-    // Chama a função para cadastrar o usuário
-    await cadastrarUsuario(email, cpf, nome, senha);
-});
-
-async function cadastrarUsuario(email, cpf, nome, senha) {
-    const url = '/index2.html'; // Endpoint da sua API para cadastrar usuário
-    const data = { email, cpf, nome, senha };
+    const url = '/cadastro'; // Endpoint da sua API para cadastro de usuário
+    const data = { email, senha };
 
     try {
         const response = await fetch(url, {
@@ -73,21 +65,20 @@ async function cadastrarUsuario(email, cpf, nome, senha) {
             body: JSON.stringify(data)
         });
 
-        
-           if (response.ok) {
-    alert('Usuário cadastrado com sucesso!');
-    window.location.href = '/index2.html';
-}
-
+        if (response.ok) {
+            alert('Usuário cadastrado com sucesso!');
         } else {
-            const errorMessage = await response.text();
-            alert('Erro ao cadastrar usuário: ' + errorMessage);
+            alert('Erro ao cadastrar usuário.');
         }
+
+        // Redireciona sempre após a conclusão da requisição
+        window.location.href = '/index2.html';
+
     } catch (error) {
         console.error('Erro ao cadastrar usuário:', error);
-        alert('Erro ao cadastrar usuário. Por favor, tente novamente.');
+        alert('Erro ao cadastrar usuário. Tente novamente mais tarde.');
     }
-}
+});
 </script>
 
 </body>

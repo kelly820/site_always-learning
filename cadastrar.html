@@ -73,10 +73,12 @@ async function cadastrarUsuario(email, cpf, nome, senha) {
             body: JSON.stringify(data)
         });
 
-        if (response.ok) {
-            alert('Usuário cadastrado com sucesso!');
-            console.log('Novo usuário cadastrado:', data);
-            window.location.href = '/index2.html';
+        
+           if (response.ok) {
+    alert('Usuário cadastrado com sucesso!');
+    window.location.href = '/index2.html';
+}
+
         } else {
             const errorMessage = await response.text();
             alert('Erro ao cadastrar usuário: ' + errorMessage);

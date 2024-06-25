@@ -1,18 +1,20 @@
-from flask import Flask, render_template, request, redirect, session, jsonify, app# type: ignore
-from flask_sqlalchemy import SQLAlchemy # type: ignore
-from werkzeug.security import generate_password_hash, check_password_hash # type: ignore
-
+from flask import Flask, render_template, request, jsonify
+from flask_sqlalchemy import SQLAlchemy
+from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 
-
+# Configuração da chave secreta para sessões
 app.secret_key = 'sua_chave_secreta'  # Use uma chave secreta segura para as sessões
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/bd_site.sql'
+
+# Configuração da URI do banco de dados
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/bd_site'  # Ajuste o nome do banco de dados conforme necessário
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+# Inicialização da extensão SQLAlchemy
+db = SQLAlchemy(app)
 
 # Definição do modelo de usuário
-db = SQLAlchemy(app)
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(100), unique=True, nullable=False)
@@ -32,6 +34,12 @@ def register():
     cpf = request.form['cpf']
     nome = request.form['nome']
     senha = request.form['senha']
+
+    # Verifica se o usuário já existe pelo email ou CPF
+    existing_user = User.query.filter_by(email=email).first() or User.query.filter_by(cpf=cpf).first()
+
+    if existing_user:
+        return jsonify({'status': 'error', 'message': 'Email ou CPF já cadastrados.'}), 400
 
     # Cria um novo usuário
     hashed_password = generate_password_hash(senha, method='sha256')
